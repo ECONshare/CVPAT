@@ -1,4 +1,8 @@
 ###########################################################
+## CITATION: Liengaard, B., Sharma, P.N., Hult, T., Jensen, M., Sarstedt, M., Hair, J., and Ringle, C. "Prediction: coveted, yet forsaken? Introducing a cross-validated predictive ability test in partial least squares path modeling," forthcoming at Decision Sciences, (2020).
+###########################################################
+
+###########################################################
 ## Input to CVPAT function
 ###########################################################
  
