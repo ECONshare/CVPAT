@@ -1,7 +1,7 @@
 ###########################################################
 ## Input to CVPAT function
 ###########################################################
-
+ 
 MV: 
 Data of the manifest variables (indicators) used for the partial least squares (PLS) path model estimation. The variable names must be the same as specified in Model1 and Model2 (see below).
 
