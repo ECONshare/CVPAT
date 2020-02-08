@@ -1,3 +1,5 @@
+# CITATION: Liengaard, B., Sharma, P.N., Hult, T., Jensen, M., Sarstedt, M., Hair, J., and Ringle, C. "Prediction: coveted, yet forsaken? Introducing a cross-validated predictive ability test in partial least squares path modeling," forthcoming at Decision Sciences, (2020).
+
 CVPAT <- function(MV, CVFolds, Model1, Model2, hypothesis, BootSamp, boot.Di=FALSE, seed=FALSE){
   if(hypothesis == "M1_better_out_of_sample_than_M2"){testtype = "greater"}
   if(hypothesis == "M1!=M2"){testtype = "two.sided"}
