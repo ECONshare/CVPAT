@@ -1,0 +1,52 @@
+###########################################################
+## Corporate reputation model example of the cross-validated predictive ability test
+###########################################################
+
+This example shows an application of the cross-validated predictive ability test (CVPAT; Liengaard et al., 2020) to the corporate reputation model (Schwaiger, 2004).
+The established model (EM) includes competence (COMP) and likeability (LIKE), which represent corporate reputation’s two dimensions. 
+These two constructs explain customer satisfaction (CUSA) and customer loyalty (CUSL), while the model also includes a direct relationship from CUSA to CUSL. 
+Moreover, with quality of customer orientation (QUAL), economic and managerial performance (PERF), corporate social responsibility (CSOR), and attractiveness (ATTR) of a company, 
+the model includes fours antecedents of the corporate reputation dimensions COMP and LIKE (for more details of this example, see Hair et al, 2017). 
+This model does not include direct relationships form QUAL, PERF, CSOR, and ATTR to CUSA and CUSL. 
+Therefore, it implicitly assumes a full mediation of these relationships by the two corporate reputation dimensions COMP and LIKE. 
+The alternative model (AM) includes these direct relationships from QUAL, PERF, CSOR, and ATTR to CUSA and to CUSL. 
+
+###########################################################
+## Explanation to the section "Results extraction"
+###########################################################
+
+
+In the “Results extraction” section, we show four ways to obtain results from the CVPAT function (all types of output from the CVPAT function is described in the README.txt file). 
+The two first lines
+
+-	res_CVPAT$losses$avg_losses$avg_losses_M1
+-	res_CVPAT$losses$avg_losses$avg_losses_M2
+
+provide the average losses for Model 1 and Model 2 respectively. 
+The output gives the overall loss in the first column and the remaining columns are the average losses associated with specific dependent constructs in the PLS path model. 
+Comparing average losses for specific constructs across the two models can give hints to which constructs is contributing most to the deviation between the models’ overall loss. 
+Notice that the AM is specified as Model 1 in the CVPAT function and the EM is specified as Model 2. 
+Hence, when comparing the average model loss between the EM and AM, we find that the EM has a lower average loss than the AM. 
+
+-	 res_CVPAT$boot.p.values
+
+gives the bootstrapped p-values, and shows no significant difference between the two models. The boot.p.values is described in the README file. 
+
+-	res_CVPAT$p.value
+
+is the non-bootstrapped p-value and is in line with the bootstrapped p-values.
+
+-	res_CVPAT$conf.int
+
+gives the non-bootstrapped confidence interval, which is also yields the conclusion of no significant differences between the two models. 
+Overall there is no evidence in favor of the AM being the model with best out-of-sample performance, and we retain the EM as the best predictive model. 
+When comparing the average losses between the AM and EM, we find that the EM has the lowest loss. 
+For this reason, the statistical test shows that the out-of-sample prediction accuracy of AM is not significantly better than the EM.
+
+_______________
+References
+Hair, J. F., Hult, G. T. M., Ringle, C. M., & Sarstedt, M. (2017). A primer on partial least squares structural equation modeling (PLS-SEM) (2nd ed.). Thousand Oaks, CA: Sage.
+
+Liengaard, B., Sharma, P. N., Hult, G. T. M., Jensen, M. B., Sarstedt, M., Hair, J. F., & Ringle, C. M. (2020). Prediction: coveted, yet forsaken? Introducing a cross-validated predictive ability test in partial least squares path modeling. Decision Sciences, forthcoming.
+
+Schwaiger, M. (2004). Components and parameters of corporate reputation: An empirical study. Schmalenbach Business Review, 56(1), 46-71.
