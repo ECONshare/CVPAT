@@ -7,9 +7,6 @@ CVPAT <- function(MV, CVFolds, Model1, Model2, hypothesis, BootSamp, boot.Di=FAL
   if (seed==FALSE) {
   }
   else{
-    ifelse(exists(".Random.seed"),1,set.seed(seed))
-    old <- .Random.seed
-    on.exit( { .Random.seed <<- old } )
     set.seed(seed)
   }
   
