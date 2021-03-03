@@ -4,7 +4,9 @@ setwd("C:/CVPAT")
 
 
 # Install required packages --------------------------------------------------
-#install.packages("matrixpls")
+#install.packages("devtools")
+#library(devtools)
+#install_version("matrixpls", version = "1.0.11", repos = "http://cran.us.r-project.org")
 #install.packages("cvTools")
 
 # Load required packages --------------------------------------------------
@@ -85,4 +87,3 @@ res_CVPAT$boot.p.values
 res_CVPAT$p.value
 # non-bootstrapped confidence interval
 res_CVPAT$conf.int
- 
